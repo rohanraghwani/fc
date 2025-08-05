@@ -6,6 +6,8 @@ const authController = require('../controllers/authController');
 // Removed verifyToken
 
 // Removed non-existent GET handlers
+
+router.get('/login', authController.getLogin);
 router.post('/login', authController.login);
 router.post('/change-credentials', authController.changeCredentials);
 
@@ -13,3 +15,4 @@ router.post('/change-credentials', authController.changeCredentials);
 router.post('/logout-all', authController.logoutAll);
 
 module.exports = router;
+
